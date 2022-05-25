@@ -1,7 +1,7 @@
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-// import Headline from './components/Headline/Headline';
+import Banner from './components/Banner/Banner';
 import Image from './components/Image/Image';
 import ProductTitle from './components/ProductTitle/ProductTitle';
 import Slider from "react-slick";
@@ -52,7 +52,7 @@ function App() {
     <ThemeProvider theme={theme}>
 
     <section>
-      {/* <Headline title={'on'} /> */}
+      <Banner />
       <Slider {...settings}>
         {slides.map (slide => 
           <div key={slide.productName}>
