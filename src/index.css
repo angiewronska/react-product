@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?Cormorant+Infant:ital,wght@0,300;0,500;1,500&family=Poppins:wght@100;200;300;500&display=swap');
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  overflow-x: hidden;
+  cursor: default;
+  background-color:#6C534E;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+span {
+  font-family: 'Cormorant Infant', serif;
+}
+/* #C3B0AC
+#987871
+#6C534E
+#1C0D0D */
