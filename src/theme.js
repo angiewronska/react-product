@@ -13,7 +13,7 @@ const generateMediaQuery = (breakpoint, extremum = 'min') =>
 
 export const theme = {
   color: {
-  beige: '#C3B0AC',
+  beige: '#F9F2F1',
   burnishedBrown: '#987871',
   liver: '#6C534E',
   xicetic: '#1C0D0D',
@@ -25,6 +25,7 @@ export const theme = {
     cormorant: 'Cormorant Infant',
   },
   fontSize: {
+    xxs: '1.6rem',
     xs: '2rem',
     s: '2.6rem',
     m: '3.2rem',

@@ -1,11 +1,28 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
-export const Image = styled.img`
-  width: 100%;
-  position: relative;
-  display: flex;
-  align-self: flex-start;
-`
+const fadeUpMobile = keyframes`
+  from {
+    opacity: 0;
+    bottom: 0px;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 30px;
+  }
+`;
+
+const fadeUpDesktop = keyframes`
+  from {
+    opacity: 0;
+    bottom: 0px;
+  }
+
+  to {
+    opacity: 1;
+    bottom: 60px;
+  }
+`;
 
 export const Headline = styled.h1`
   position: absolute;
@@ -18,11 +35,13 @@ export const Headline = styled.h1`
   text-transform: uppercase;
   line-height: 1;
   font-weight:600;
+  animation: ${fadeUpMobile} 2s linear 2s backwards;
   
   @media ${({ theme }) => theme.media.desktop} {
-    font-size: ${({ theme }) => theme.fontSize.xxl};
     left: 60px;
     bottom: 60px;
+    font-size: ${({ theme }) => theme.fontSize.xxl};
+    animation: ${fadeUpDesktop} 2s linear 2s backwards;
   }
   
   span {

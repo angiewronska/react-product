@@ -1,5 +1,5 @@
-import { Headline, Image } from './Banner.styled'
-
+import { Headline } from './Banner.styled'
+import { Image } from '../../style'
 import { Wrapper } from '../../style'
 
 export const Banner = ({alt, imageSrc, firstLine, secondLine}) => (
