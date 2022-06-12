@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
     overflow-y: ${({ overflowYMobile }) => overflowYMobile};
     align-items: ${({ alignItemsMobile }) => alignItemsMobile};
     white-space: ${({ whiteSpaceMobile }) => whiteSpaceMobile};
+    background: ${({ backgroundMobile }) => backgroundMobile};
 
   @media ${({ theme }) => theme.media.desktop} {
     position: ${({ positionDesktop }) => positionDesktop};
@@ -39,5 +40,20 @@ export const Wrapper = styled.div`
     overflow-y: ${({ OverflowYDesktop }) => OverflowYDesktop};
     align-items: ${({ alignItemsDesktop }) => alignItemsDesktop};
     white-space: ${({ whiteSpaceDesktop }) => whiteSpaceDesktop};
+    background: ${({ backgroundDesktop }) => backgroundDesktop};
+}
+`
+export const Image = styled.img`
+  width: ${({ widthMobile }) => widthMobile ? widthMobile : '100%' };
+  position: ${({ positionMobile }) => positionMobile ? positionMobile : 'relative'};
+  display: ${({ displayMobile }) => displayMobile ? displayMobile : 'flex'};
+  align-self: flex-start;
+  margin: ${({ marginMobile }) => marginMobile};
+  transform: ${({ transformMobile }) => transformMobile};
+ 
+  @media ${({ theme }) => theme.media.desktop} {
+    margin: ${({ marginDesktop }) => marginDesktop};
+    width: ${({ widthDesktop }) => widthDesktop};
+    transform: ${({ transformDesktop }) => transformDesktop};
   }
 `
