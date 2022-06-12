@@ -1,18 +1,5 @@
 import styled from 'styled-components'
 
-export const BannerWithImage = styled.header`
-  position: relative;
-  padding: 30px 30px 60px 30px;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  
-  @media ${({ theme }) => theme.media.desktop} {
-    padding: 60px;
-    height: 100vh;
-  }
-`
-
 export const Image = styled.img`
   width: 100%;
   position: relative;

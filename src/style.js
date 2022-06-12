@@ -1,22 +1,43 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: ${({ flexDirectionMobile }) => flexDirectionMobile ? flexDirectionMobile : 'column'};
-  overflow: hidden;
-  width: ${({ widthMobile }) => widthMobile ? widthMobile : '100%'};
+    position: ${({ positionMobile }) => positionMobile};
+    top: ${({ topMobile }) => topMobile};
+    left: ${({ leftMobile }) => leftMobile};
+    right: ${({ rightMobile }) => rightMobile};
+    z-index: ${({ zIndexMobile }) => zIndexMobile};
+    margin: ${({ marginMobile }) => marginMobile};
+    padding: ${({ paddingMobile }) => paddingMobile};
+    width: ${({ widthMobile }) => widthMobile};
+    max-width: ${({ maxWidthMobile }) => maxWidthMobile};
+    height: ${({ heightMobile }) => heightMobile};
+    display: ${({ displayMobile }) => displayMobile};
+    flex-direction: ${({ flexDirectionMobile }) => flexDirectionMobile};
+    flex-wrap: ${({ flexWrapMobile }) => flexWrapMobile};
+    justify-content: ${({ justifyContentMobile }) => justifyContentMobile};
+    overflow: ${({ overflowMobile }) => overflowMobile};
+    overflow-y: ${({ overflowYMobile }) => overflowYMobile};
+    align-items: ${({ alignItemsMobile }) => alignItemsMobile};
+    white-space: ${({ whiteSpaceMobile }) => whiteSpaceMobile};
 
   @media ${({ theme }) => theme.media.desktop} {
-    flex-direction: ${({ flexDirectionDesktop }) => flexDirectionDesktop ? flexDirectionDesktop : 'row'};
-    width: ${({ widthDesktop }) => widthDesktop ? widthDesktop : '100%'};
-  }
-
-  &:hover {
-    span {
-      color: ${({ theme }) => theme.color.beige};
-    }
+    position: ${({ positionDesktop }) => positionDesktop};
+    top: ${({ topDesktop }) => topDesktop};
+    left: ${({ leftDesktop }) => leftDesktop};
+    right: ${({ rightDesktop }) => rightDesktop};
+    z-index: ${({ zIndexDesktop }) => zIndexDesktop};
+    margin: ${({ marginDesktop }) => marginDesktop};
+    padding: ${({ paddingDesktop }) => paddingDesktop};
+    width: ${({ widthDesktop }) => widthDesktop};
+    max-width: ${({ maxWidthDesktop }) => maxWidthDesktop};
+    height: ${({ heightDesktop }) => heightDesktop};
+    display: ${({ displayDesktop }) => displayDesktop};
+    flex-direction: ${({ flexDirectionDesktop }) => flexDirectionDesktop};
+    flex-wrap: ${({ flexWrapDesktop }) => flexWrapDesktop};
+    justify-content: ${({ justifyContentDesktop }) => justifyContentDesktop};
+    overflow: ${({ overflowDesktop }) => overflowDesktop};
+    overflow-y: ${({ OverflowYDesktop }) => OverflowYDesktop};
+    align-items: ${({ alignItemsDesktop }) => alignItemsDesktop};
+    white-space: ${({ whiteSpaceDesktop }) => whiteSpaceDesktop};
   }
 `

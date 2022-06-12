@@ -57,7 +57,7 @@ function App() {
       alt="chocolate"
       imageSrc="/banner.svg"
       firstLine="The"
-      secondLine="Chocolate Lab."
+      secondLine="Choco Lab."
     />
     <section>
       <Slider {...settings}>
@@ -69,7 +69,15 @@ function App() {
                 ingredient={slide.ingredient} 
                 emotion={slide.emotion} 
               />
-              <Wrapper widthMobile={'30%'} widthDesktop={'50%'}>
+              <Wrapper 
+                widthMobile="30%"
+                widthDesktop="50%"
+                positionMobile="relative"
+                displayMobile="flex"
+                flexDirectionMobile="column"
+                flexDirectionDesktop="row"
+                overflow="hidden"
+              >
                 <Image 
                   src={slide.imageSrc}
                   alt={`${slide.productName} bar with ${slide.ingredient}`} 
