@@ -30,6 +30,7 @@ export const theme = {
     m: '3.2rem',
     l: '4.6rem',
     xl: '5.2rem',
+    xxl: '12rem',
   },
   media: {
     tablet: generateMediaQuery(breakpoints.tablet),

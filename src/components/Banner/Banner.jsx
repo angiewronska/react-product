@@ -1,24 +1,9 @@
-import { BannerWithImage, Button, Shape } from './Banner.styled'
+import { BannerWithImage, Headline, Image } from './Banner.styled'
 
-import Image from '../Image/Image'
-
-export const Banner = () => (
+export const Banner = ({alt, imageSrc, firstLine, secondLine}) => (
   <BannerWithImage>
-    {/* <Button>show more...</Button> */}
-    {/* <Image src="" alt="chocolate" /> */}
-    <Shape 
-      widthMobile="80px" 
-      heightMobile="160px" 
-      bgColor="#C3B0AC"
-      zIndex="2"
-      left="30%"
-    />
-    <Shape 
-      widthMobile="120px" 
-      heightMobile="220px" 
-      bgColor="#987871"
-      zIndex="0"
-    />
+    <Image src={imageSrc} alt={alt} />
+    <Headline><span>{firstLine}</span> {secondLine}</Headline>
   </BannerWithImage>
 )
 export default Banner

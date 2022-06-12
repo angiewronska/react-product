@@ -1,43 +1,50 @@
 import styled from 'styled-components'
 
-export const BannerWithImage = styled.div`
+export const BannerWithImage = styled.header`
   position: relative;
-  padding: 30px;
+  padding: 30px 30px 60px 30px;
   display: flex;
   justify-content: center;
+  width: 100%;
   
   @media ${({ theme }) => theme.media.desktop} {
-    padding: 100px;
+    padding: 60px;
+    height: 100vh;
   }
 `
 
-export const Shape = styled.div`
-  width: ${({ widthMobile }) => widthMobile};
-  height: ${({ heightMobile }) => heightMobile};
-  background-color: ${({ bgColor }) => bgColor};
-  z-index: ${({ zIndex }) => zIndex};
-  border-radius: 300px;
-  position: ${({ zIndex }) => zIndex > 0 ? 'absolute': 'relative'};
-  top: ${({ zIndex }) => zIndex > 0 && '50%'};
-  left: ${({ zIndex,left }) => zIndex > 0 && left};
+export const Image = styled.img`
+  width: 100%;
+  position: relative;
   display: flex;
-
+  align-self: flex-start;
 `
 
-export const Button = styled.button`
-  padding: 10px 40px;
-  border-radius: 30px;
-  border: none;
-  font-family: ${({ theme }) => theme.font.cormorant};
-  font-size: ${({ theme }) => theme.fontSize.s};
-  font-weight: 500;
-  font-style: italic;
-  color: ${({ theme }) => theme.color.white};
-  background-color: ${({ theme }) => theme.color.xicetic};
-  transition: .4s all linear;
-  &:hover {
-  background-color: ${({ theme }) => theme.color.burnishedBrown};
-  transform: translateY(-5px);
+export const Headline = styled.h1`
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  width: 40%;
+  font-size: ${({ theme }) => theme.fontSize.l};
+  font-family: ${({ theme }) => theme.font.poppins};
+  color: ${({ theme }) => theme.color.xiatic};
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight:600;
+  
+  @media ${({ theme }) => theme.media.desktop} {
+    font-size: ${({ theme }) => theme.fontSize.xxl};
+    left: 60px;
+    bottom: 60px;
+  }
+  
+  span {
+    display: block;
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    font-family: ${({ theme }) => theme.font.poppins};
 
+    @media ${({ theme }) => theme.media.desktop} {
+      font-size: ${({ theme }) => theme.fontSize.xl};
+    }
   }
 `

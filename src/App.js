@@ -18,6 +18,8 @@ function App() {
     slidesToShow: 1,
     slidesToScroll: 1,
     pauseOnHover: false,
+    dots: false,
+    arrows: false,
   };
 
   const slides = [
@@ -51,8 +53,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
 
+    <Banner 
+      alt="chocolate"
+      imageSrc="/banner.svg"
+      firstLine="The"
+      secondLine="Chocolate Lab."
+    />
     <section>
-      <Banner />
       <Slider {...settings}>
         {slides.map (slide => 
           <div key={slide.productName}>
